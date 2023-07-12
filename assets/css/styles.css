@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap");
+:root {
+  --textFont: "DM Sans", sans-serif;
+  --headingFont: "DM Serif Display", serif;
+  --white: #ebf2fa;
+  --dark: #212f45;
+  --main: #4d194d;
+  --secondary: #006466;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--headingFont);
+}
+
+p, a, span, li, button, label, input {
+  font-family: var(--textFont);
+}
+
+.nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.nav__logo {
+  width: 3rem;
+  height: 3rem;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+.nav__list__links {
+  padding: 0.2rem 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+  border-radius: 0.15rem;
+  transition: all ease-in-out 0.25s;
+}
+.nav__list__links:hover {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.nav__list__links.active {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.nav__hamb {
+  display: none;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.nav__hamb span {
+  display: block;
+  background-color: var(--dark);
+  height: 3px;
+  width: 28px;
+  margin: 9px auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 828px) {
+  body {
+    overflow: hidden;
+    z-index: 1;
+  }
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
+  .nav__logo {
+    margin-left: 2rem;
+  }
+  .nav__list {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 5;
+  }
+  .nav__list li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__list__links {
+    width: 100%;
+    padding: 0 7rem;
+    background-color: transparent;
+  }
+  .nav__list__links:hover {
+    color: var(--secondary);
+    background: none;
+  }
+  .nav__list__links.active {
+    color: var(--secondary);
+    background: none;
+  }
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .nav__list.active {
+    display: flex;
+    animation: showMenu 300ms ease-in-out both;
+  }
+  .nav .br-1.animated {
+    transform: rotate(-45deg) translate(-9px, 8px);
+  }
+  .nav .br-2.animated {
+    opacity: 0;
+  }
+  .nav .br-3.animated {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  .nav__hamb {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    transition: 0.2s 0.1s;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
