@@ -412,6 +412,15 @@ input {
 .form form button:hover {
   background-color: var(--secondary);
 }
+.form form .warnings {
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 22rem;
+  text-align: center;
+  margin: auto;
+  color: #f81367;
+  padding-top: 2rem;
+}
 
 .footer {
   width: 100%;

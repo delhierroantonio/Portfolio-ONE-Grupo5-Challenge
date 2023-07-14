@@ -163,31 +163,32 @@
   </section>
   <section class="form" id="contact">
     <h2 class="form__title">Let's get in touch</h2>
-    <form action="send" class="container">
+    <form action="send" class="container" id="form">
       <fieldset>
         <!-- 1 -->
         <div class="input-container">
           <label for="name" class="label">Name</label>
-          <input type="text" name="name" placeholder="John Doe" required class="input">
+          <input type="text" name="name" placeholder="John Doe" class="input" minlength="4" maxlength="50" id="name">
         </div>
         <!-- 2 -->
         <div class="input-container">
           <label for="email" class="label">Email</label>
-          <input type="email" name="email" placeholder="johndoe@mail.com" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input">
+          <input type="email" name="email" placeholder="johndoe@mail.com" class="input" id="email">
         </div>
         <!-- 3 -->
         <div class="input-container">
           <label for="subject" class="label">Subject</label>
-          <input type="text" name="subject" placeholder="Porject discuss" required class="input">
+          <input type="text" name="subject" placeholder="Porject discuss" class="input" id="subject">
         </div>
         <!-- 4 -->
         <div class="input-container">
           <label for="message" class="label">Message</label>
-          <textarea rows="5" cols="33" maxlength="60">
+          <textarea rows="5" cols="33" id="message">
           </textarea>
         </div>
       </fieldset>
       <button type="submit">Send</button>
+      <p class="warnings" id="warnings"></p>
     </form>
   </section>
   <div class="footer">

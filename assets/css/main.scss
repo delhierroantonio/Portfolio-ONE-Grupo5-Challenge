@@ -445,6 +445,15 @@ input {
         background-color: var(--secondary);
       }
     }
+    .warnings {
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 22rem;
+      text-align: center;
+      margin: auto;
+      color: #f81367;
+      padding-top: 2rem;
+    }
   }
 }
 .footer {
