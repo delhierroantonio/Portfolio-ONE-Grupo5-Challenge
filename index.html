@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- feather icons library -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- animation aos library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="/assets/css/normalize.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <title>Antonio Del Hierro|Portfolio</title>
 </head>
+
 <body>
-  <header>
+  <header class="container">
     <nav class="nav">
       <a href="/">
         <img src="assets/images/logo.png" alt="portfolio logo" class="nav__logo" />
@@ -19,19 +25,19 @@
           <a href="/" class="nav__list__links active">Home</a>
         </li>
         <li>
-          <a href="/education.html" class="nav__list__links">Education</a>
+          <a href="#education" class="nav__list__links">Education</a>
         </li>
         <li>
-          <a href="/hobbiesAndSkills.html" class="nav__list__links">Skills</a>
+          <a href="#skills" class="nav__list__links">Skills</a>
         </li>
         <li>
-          <a href="/projects.html" class="nav__list__links">Projects</a>
+          <a href="#experience" class="nav__list__links">Projects</a>
         </li>
         <li>
-          <a href="/about.html" class="nav__list__links">About</a>
+          <a href="#about" class="nav__list__links">About</a>
         </li>
         <li>
-          <a href="/contact.html" class="nav__list__links">Contact</a>
+          <a href="#contact" class="nav__list__links">Contact</a>
         </li>
       </ul>
       <button class="nav__hamb" type="button">
@@ -41,13 +47,163 @@
       </button>
     </nav>
   </header>
-  <main>
-    <h1>Portfolio</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, incidunt praesentium quisquam minus earum mollitia odit velit exercitationem fugiat at architecto provident, ad perspiciatis porro optio ullam numquam ducimus dolor!</p>
-    <a href="#">View More</a>
+  <section class="hero">
+    <div class="hero__content container">
+      <h1 class="hero__content__title">Hey I'm Antonio Del Hierro <br><span> Front-End </span>developer</h1>
+      <p class="hero__content__subtitle">I love building delightful web experiences. <br>
+        I'm a technology devotee in general but
+        my passion belongs to programming.
+      <p class="hero__content__text">
+        Let's talk about: Web Development, Javascript, React Js and more</>
+      </p>
+      <div class="hero__content__btn">
+        <a href="mailto:contact@delhierroantonio.dev" rel="noopener no referrer" class="email">email</a>
+        <a href="#" class="cv">cv</a>
+      </div>
+    </div>
+    <div class="hero__img">
+      <img src="/assets/images/profilePicture.jpeg" alt="profile picture">
+    </div>
+  </section>
+  <main class="about" id="about">
+    <div class="container">
+      <h2 class="about__title">About Me</h2>
+      <p class="about__text">I'm 26 years old, I'm from Mexico. <br> seek to delivering exceptional results, with
+        passion and excellence. <br> My dedication for coding is driven by a desire to explore the newest and most innovative
+        technologies.</p>
+        <div class="about__socials">
+          <a href="https://github.com/delhierroantonio" target="_blank" rel="noopener noreferrer">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/delhierroantonio/"target="_blank" rel="noopener noreferrer">
+            <i data-feather="linkedin"></i>
+          </a>
+        </div>
+      <img src="/assets/images/signature.png" alt="signature photo" class="about__signature">
+    </div>
   </main>
-
+  <section class="box container" id="skills">
+    <h2 class="box__title">My Skills</h2>
+    <div class="box__container">
+      <div class="box">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML5</span>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span>CSS</span>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-square-js"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-react"></i>
+        <span>React Js</span>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-sass"></i>
+        <span>SASS</span>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-git-alt"></i>
+        <span>GIT</span>
+      </div>
+    </div>
+  </section>
+  <section class="box container" id="hobbies">
+    <h2 class="box__title">My Hobbies</h2>
+    <div class="box__container">
+      <div class="box">
+        <i class="fa-solid fa-gamepad"></i>
+        <span>Video Games</span>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-book"></i>
+        <span>Reading</span>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-pencil"></i>
+        <span>Drawing</span>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-bicycle"></i>
+        <span>Biking</span>
+      </div>
+    </div>
+  </section>
+  <section class="education" id="education">
+    <h2>Academic Background</h2>
+    <div class="container education__container">
+      <div class="box">
+        <img src="/assets/images/alura-logo.png" alt="alura logo">
+        <p>Front/End Development</span>
+        <span>On going</span>
+      </div>
+      <div class="box">
+        <img src="/assets/images/coderhouse-logo.png" alt="alura logo">
+        <p>Front/End Development React</span>
+        <span>2022</span>
+      </div>
+    </div>
+  </section>
+  <section class="experience container" id="experience">
+    <h2>Professional experience</h2>
+    <div class="experience__container">
+      <img src="/assets/images/encriptador.png" alt="encriptador de texto">
+      <div class="content">
+        <h3>Encriptador de texto</h3>
+        <p>challenge Alura ONE (JavaScript)</p>
+        <div class="btn">
+          <a href="https://github.com/delhierroantonio/ChallengeOneCodififcador-5#como-funciona" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://delhierroantonio.github.io/ChallengeOneCodififcador-5/" target="_blank" rel="noopener noreferrer">demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="form" id="contact">
+    <h2 class="form__title">Let's get in touch</h2>
+    <form action="send" class="container">
+      <fieldset>
+        <!-- 1 -->
+        <div class="input-container">
+          <label for="name" class="label">Name</label>
+          <input type="text" name="name" placeholder="John Doe" required class="input">
+        </div>
+        <!-- 2 -->
+        <div class="input-container">
+          <label for="email" class="label">Email</label>
+          <input type="email" name="email" placeholder="johndoe@mail.com" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input">
+        </div>
+        <!-- 3 -->
+        <div class="input-container">
+          <label for="subject" class="label">Subject</label>
+          <input type="text" name="subject" placeholder="Porject discuss" required class="input">
+        </div>
+        <!-- 4 -->
+        <div class="input-container">
+          <label for="message" class="label">Message</label>
+          <textarea rows="5" cols="33" maxlength="60">
+          </textarea>
+        </div>
+      </fieldset>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <div class="footer">
+    <p>Antonio Del Hierro. 2023 © All rights reserved</p>
+  </div>
+  <!-- scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    feather.replace()
+  </script>
+  <script src="https://kit.fontawesome.com/d791f42ed4.js" crossorigin="anonymous"></script>
   <script src="/js/index.js"></script>
   <!-- aplicar lazy loading images -->
 </body>
+
 </html>

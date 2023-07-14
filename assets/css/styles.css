@@ -1,27 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@500;700&display=swap");
 :root {
   --textFont: "DM Sans", sans-serif;
-  --headingFont: "DM Serif Display", serif;
+  --headingFont: "Syne", sans-serif;
   --white: #ebf2fa;
   --dark: #212f45;
   --main: #4d194d;
   --secondary: #006466;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--headingFont);
+  letter-spacing: 0.1rem;
 }
 
-p, a, span, li, button, label, input {
+p,
+a,
+li,
+button,
+label,
+input {
   font-family: var(--textFont);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: 0 1.4rem;
 }
 
 .nav {
+  width: 100%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 }
 .nav__logo {
   width: 3rem;
@@ -68,7 +85,6 @@ p, a, span, li, button, label, input {
 
 @media (max-width: 828px) {
   body {
-    overflow: hidden;
     z-index: 1;
   }
   .nav {
@@ -84,7 +100,7 @@ p, a, span, li, button, label, input {
   .nav__list {
     display: none;
     position: absolute;
-    top: 5rem;
+    top: 7rem;
     width: 100%;
     height: 90vh;
     flex-direction: column;
@@ -93,6 +109,7 @@ p, a, span, li, button, label, input {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    border-radius: 0.4rem;
     opacity: 0;
     z-index: 5;
   }
@@ -140,6 +157,269 @@ p, a, span, li, button, label, input {
     right: 2rem;
     transition: 0.2s 0.1s;
   }
+}
+.hero {
+  height: 100%;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.hero__content {
+  flex: 1;
+  order: 2;
+  text-align: center;
+}
+.hero__content__title {
+  font-size: 2.4rem;
+}
+.hero__content__title span {
+  color: var(--secondary);
+}
+.hero__content__subtitle {
+  font-size: 1.6rem;
+}
+.hero__content__text {
+  font-size: 1.2rem;
+  color: var(--dark);
+  opacity: 0.8;
+}
+.hero__content__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__content__btn a {
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 0.2rem 1rem;
+  border-radius: 0.3rem;
+  transition: all ease-in-out 0.2s;
+}
+.hero__content__btn a:hover {
+  background-color: var(--secondary);
+}
+.hero__img {
+  flex: 1;
+  order: 1;
+  margin: 0 2rem;
+}
+.hero__img img {
+  width: 100%;
+  max-width: 40rem;
+  height: 35vh;
+  object-fit: cover;
+  object-position: center center;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
+  .hero__content {
+    order: 1;
+  }
+  .hero__img {
+    order: 2;
+  }
+  .hero__img img {
+    height: 50vh;
+  }
+}
+.about {
+  min-height: 40vh;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 1rem 0;
+}
+.about__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  transition: all ease-in-out 0.5s;
+}
+.about__socials :nth-child(n):hover {
+  color: #087fb7;
+}
+.about__signature {
+  width: 18rem;
+  height: 6rem;
+  margin: 0 auto;
+  filter: invert(1);
+}
+
+.box {
+  text-align: center;
+  height: 100%;
+  padding: 2rem 0;
+}
+.box__container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.box__container .box {
+  min-width: 10rem;
+  min-height: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  background-color: var(--secondary);
+  border-radius: 0.3rem;
+}
+.box__container .box i {
+  font-size: 2rem;
+}
+.box__container .box span {
+  font-family: var(--textFont);
+  letter-spacing: 0.1rem;
+}
+
+.education {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 2rem 0;
+}
+.education__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.education__container .box {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark);
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+.education__container .box p {
+  font-size: 1.2rem;
+}
+.education__container .box span {
+  display: block;
+  opacity: 0.8;
+  color: var(--dark);
+}
+.education__container .box img {
+  width: 100%;
+  height: 7rem;
+  object-fit: cover;
+  object-position: center center;
+  border-bottom: 1px solid black;
+}
+
+.experience {
+  padding: 2rem 0;
+}
+.experience h2 {
+  text-align: center;
+}
+.experience__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.experience__container img {
+  height: 30rem;
+  object-fit: cover;
+  object-position: center center;
+}
+.experience__container .content h3 {
+  font-size: 1.6rem;
+}
+.experience__container .content p {
+  color: var(--secondary);
+  letter-spacing: 0.1rem;
+}
+.experience__container .content .btn {
+  display: flex;
+  gap: 1rem;
+}
+.experience__container .content .btn a {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--dark);
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.form {
+  margin: 1rem 0;
+  border-top: 1px solid rgb(202, 202, 202);
+}
+.form__title {
+  text-align: center;
+}
+.form form {
+  padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.form form fieldset {
+  border: none;
+}
+.form form fieldset .input-container label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.form form fieldset .input-container input {
+  width: 100%;
+  max-width: 45rem;
+  border: none;
+  border-bottom: 1px solid rgb(209, 208, 208);
+  margin-bottom: 1rem;
+}
+.form form fieldset .input-container textarea {
+  border: none;
+  border-bottom: 1px solid rgb(209, 208, 208);
+  resize: none;
+  width: 100%;
+  max-width: 45rem;
+}
+.form form button {
+  color: var(--white);
+  background-color: var(--dark);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 2.2rem;
+  margin-left: 1rem;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+}
+.form form button:hover {
+  background-color: var(--secondary);
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--secondary);
 }
 
 /*# sourceMappingURL=styles.css.map */
